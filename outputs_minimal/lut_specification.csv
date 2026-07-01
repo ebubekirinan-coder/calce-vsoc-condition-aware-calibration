@@ -1,0 +1,2 @@
+Temperature_levels,Rate_charge_cutoff_levels,Charge_Rate_ratehist_levels,SoC_grid_start,SoC_grid_stop,SoC_grid_step,SoC_grid_n_points,total_entries,expected_full_4x2x3_entries,float32_kB,float16_kB
+"10,25,45,60","C/5,C/40","0.7C,1C,2C",0.0,100.0,1.0,101,2424,2424,9.47,4.73
