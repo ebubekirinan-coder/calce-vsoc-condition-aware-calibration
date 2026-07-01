@@ -1,7 +1,7 @@
 {
-  "title": "Open-source preprocessing and representative-cell selection code for CALCE LiCoO2/graphite V-SoC calibration",
+  "title": "Reproducibility code for condition-aware CALCE LiCoO2/graphite V-SoC calibration",
   "upload_type": "software",
-  "description": "This repository contains the preprocessing, consistency-check, representative-cell selection, statistical-analysis, sparse gated correction, and isotonic LUT construction code used for condition-aware V-SoC calibration of the CALCE LiCoO2/graphite battery dataset.",
+  "description": "This repository contains reproducibility code for dataset consistency checks, representative-cell selection, condition-family visualization, statistical analysis, sparse gated correction, measured-grid profile evaluation, and isotonic LUT construction for condition-aware V-SoC calibration of the CALCE LiCoO2/graphite lithium-ion battery dataset.",
   "creators": [
     {
       "name": "Inan, Ebubekir",
@@ -21,6 +21,8 @@
     }
   ],
   "license": "MIT",
+  "version": "1.0.0",
+  "access_right": "open",
   "keywords": [
     "lithium-ion battery",
     "CALCE",
@@ -28,16 +30,18 @@
     "condition-aware calibration",
     "isotonic regression",
     "lookup table",
+    "sparse gated correction",
+    "measured-grid reconstruction",
     "BMS"
   ],
   "related_identifiers": [
     {
-      "identifier": "https://doi.org/10.1016/j.jpowsour.2019.226830",
+      "identifier": "10.1016/j.jpowsour.2019.226830",
       "relation": "isDerivedFrom",
       "scheme": "doi"
     },
     {
-      "identifier": "https://doi.org/10.17632/c35zbmn7j8.1",
+      "identifier": "10.17632/c35zbmn7j8.1",
       "relation": "isDerivedFrom",
       "scheme": "doi"
     }
