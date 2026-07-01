@@ -1,0 +1,45 @@
+{
+  "title": "Open-source preprocessing and representative-cell selection code for CALCE LiCoO2/graphite V-SoC calibration",
+  "upload_type": "software",
+  "description": "This repository contains the preprocessing, consistency-check, representative-cell selection, statistical-analysis, sparse gated correction, and isotonic LUT construction code used for condition-aware V-SoC calibration of the CALCE LiCoO2/graphite battery dataset.",
+  "creators": [
+    {
+      "name": "Inan, Ebubekir",
+      "affiliation": "Kayseri University"
+    },
+    {
+      "name": "Aksöz, Ahmet",
+      "affiliation": "Kayseri University"
+    },
+    {
+      "name": "Oyucu, Saadin",
+      "affiliation": "Gazi University"
+    },
+    {
+      "name": "Biçer, Emre",
+      "affiliation": "Sivas University of Science and Technology"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "lithium-ion battery",
+    "CALCE",
+    "voltage-SoC calibration",
+    "condition-aware calibration",
+    "isotonic regression",
+    "lookup table",
+    "BMS"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.1016/j.jpowsour.2019.226830",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://doi.org/10.17632/c35zbmn7j8.1",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ]
+}
