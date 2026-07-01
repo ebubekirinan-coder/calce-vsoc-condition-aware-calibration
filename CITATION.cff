@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Open-source preprocessing and representative-cell selection code for CALCE LiCoO2/graphite V-SoC calibration"
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: "Inan"
+    given-names: "Ebubekir"
+  - family-names: "Aksöz"
+    given-names: "Ahmet"
+  - family-names: "Oyucu"
+    given-names: "Saadin"
+  - family-names: "Biçer"
+    given-names: "Emre"
+version: "1.0.0"
+date-released: "2026-07-01"
+license: "MIT"
+repository-code: "https://github.com/ebubekirinan-coder/calce-vsoc-condition-aware-calibration"
+keywords:
+  - lithium-ion battery
+  - voltage-SoC calibration
+  - CALCE
+  - isotonic regression
+  - lookup table
+  - representative-cell selection
