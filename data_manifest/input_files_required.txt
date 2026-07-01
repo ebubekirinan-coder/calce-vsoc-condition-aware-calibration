@@ -1,0 +1,28 @@
+Required local input files:
+
+Processed_Outputv3_1.xlsx
+Processed_Outputv3_2.xlsx
+Processed_Outputv3_3.xlsx
+
+These files are processed working files derived from the public CALCE accelerated cycle-life dataset. They are not redistributed in this software repository due to file-size and data-hosting constraints.
+
+The original CALCE battery dataset is publicly available from the Center for Advanced Life Cycle Engineering (CALCE), University of Maryland. The associated cycle-capacity data record is available through Mendeley Data.
+
+To reproduce the full workflow, place the three required input files in the repository root before running the notebooks.
+
+Expected processed-file consistency checks:
+
+- Total processed records: 2,358,728
+- Unique sample numbers: 181
+- Sample-number range: 1--187
+- Cycle-index range: 1--611
+
+After block-aware representative-cell selection:
+
+- Retained records before discharge-only filtering: 309,055
+- Globally unique representative sample identifiers: 25
+- Nominal operating conditions covered: 24 / 24
+
+After discharge-only filtering:
+
+- Final discharge-only analysis records: 309,020
