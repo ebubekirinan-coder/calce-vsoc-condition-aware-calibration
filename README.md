@@ -89,6 +89,8 @@ Bootstrap diagnostics:
 - T+Rate Delta MAE 95% CI = [112.93, 117.25] mV
 - Paired Wilcoxon signed-rank tests give p < 1e-6 for both calibrated variants.
 
+  Files containing legacy_do_not_use are retained only for audit trail and are not used in the manuscript.
+
 ## Repository structure
 
 ```text
