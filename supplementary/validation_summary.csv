@@ -1,0 +1,7 @@
+analysis,validation,method,comparison,band,n_planned_cells,n_evaluated_cells,n_grid,n_target,n_paired,n_used,MAE_mV,mean_cell_RMSE_mV,bias_mV,worst_abs_mV,paired_target_fraction,used_target_fraction,evaluated_cell_fraction
+broad_52_132,LOCO,unified,own_support,all_0_90_inclusive,179,179,16289,15639,15639,15639,4.35366663323,4.75532594223,0.608826073518,65.3267502785,1,1,1
+broad_52_132,rate_holdout,unified,own_support,all_0_90_inclusive,62,62,5642,5642,5096,5096,18.0413999764,19.6186506718,9.7766823808,72.364449501,0.903225806452,0.903225806452,1
+broad_52_132,temperature_holdout,unified,own_support,all_0_90_inclusive,96,96,8736,8736,8112,8112,33.1899256454,34.68831655,-33.0847770752,89.4679086549,0.928571428571,0.928571428571,1
+full_history,LOCO,unified,own_support,all_0_90_inclusive,180,180,16380,15856,15806,15806,5.24043685244,6.11491022231,0.129443959198,144.246578217,0.996846619576,0.996846619576,1
+full_history,rate_holdout,unified,own_support,all_0_90_inclusive,62,62,5642,5642,5642,5642,19.531123575,20.87756498,15.081086628,68.1937932968,1,1,1
+full_history,temperature_holdout,unified,own_support,all_0_90_inclusive,96,96,8736,8736,8736,8736,32.1413060739,33.1216601537,-31.2794788132,85.3805456843,1,1,1

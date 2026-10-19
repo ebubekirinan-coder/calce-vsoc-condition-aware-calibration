@@ -1,0 +1,7 @@
+SoC_band,contrast_family,contrast_id,LHS condition label,RHS condition label,n_cells_lhs,n_cells_rhs,inference_eligible,delta_unadjusted_mV,delta_adjusted_mV,point_sign,point_bucket,p_value,q_BH81,cluster_CI_low_mV,cluster_CI_high_mV,bootstrap_CI_low_mV,bootstrap_CI_high_mV,bootstrap_sign_stability
+0-20,rate_0.7C_minus_2C,rate07minus2_T10_C5,"10°C, C/5, 0.7C","10°C, C/5, 2C",8,1,False,113.348798438,147.809810513,positive,moderate,,,,,,,
+0-20,rate_2C_minus_1C,rate2minus1_T10_C5,"10°C, C/5, 2C","10°C, C/5, 1C",1,7,False,-50.6352451746,-81.3127771937,negative,small,,,,,,,
+20-60,rate_0.7C_minus_2C,rate07minus2_T10_C5,"10°C, C/5, 0.7C","10°C, C/5, 2C",8,1,False,188.318508383,227.736241847,positive,large,,,,,,,
+20-60,rate_2C_minus_1C,rate2minus1_T10_C5,"10°C, C/5, 2C","10°C, C/5, 1C",1,7,False,-114.826171818,-149.615691167,negative,moderate,,,,,,,
+60-90,rate_0.7C_minus_2C,rate07minus2_T10_C5,"10°C, C/5, 0.7C","10°C, C/5, 2C",8,1,False,211.512680481,257.027747483,positive,large,,,,,,,
+60-90,rate_2C_minus_1C,rate2minus1_T10_C5,"10°C, C/5, 2C","10°C, C/5, 1C",1,7,False,-144.169858798,-183.559607246,negative,large,,,,,,,

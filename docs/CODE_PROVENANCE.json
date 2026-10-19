@@ -1,0 +1,47 @@
+{
+  "snapshot": {
+    "repo_path": "docs/source_snapshot/revisedcalce_colab_export.txt",
+    "sha256": "e1e19f12f7327ac5c558d41e8075767f8207c3699d59435855805f67a92c1426"
+  },
+  "scientific_stages": {
+    "01_band_coverage.py": {
+      "original_notebook_cell": 4,
+      "scientific_cell_sha256": "76cdd40e541612aac1ad6ac48dc99e88bc059c2cba7b5e6fa3b8c4298a4e3b05",
+      "shared_setup_sha256": "f69b88d037b7c2dc5f7445df054b3e9676522c51af31ace3636efc5a2dfe936b",
+      "source": "SoC_ConditionvCodes2_Five_Stage_Rebuild.ipynb"
+    },
+    "02_age_sensitivity.py": {
+      "original_notebook_cell": 6,
+      "scientific_cell_sha256": "99d38fe63027886e2d923ba49a87476c7da0f79a3d2ff9073609974feb351ef7",
+      "shared_setup_sha256": "f69b88d037b7c2dc5f7445df054b3e9676522c51af31ace3636efc5a2dfe936b",
+      "source": "SoC_ConditionvCodes2_Five_Stage_Rebuild.ipynb"
+    },
+    "03_unified_validation.py": {
+      "original_notebook_cell": 8,
+      "scientific_cell_sha256": "81bb0a3960fbfa90aaffb95da88087df78e738960b78d750372433237645fd46",
+      "shared_setup_sha256": "f69b88d037b7c2dc5f7445df054b3e9676522c51af31ace3636efc5a2dfe936b",
+      "source": "SoC_ConditionvCodes2_Five_Stage_Rebuild.ipynb"
+    },
+    "04_support_audit.py": {
+      "original_notebook_cell": 10,
+      "scientific_cell_sha256": "66144840a99cdd376676ee0a87d3181282ea9520d1fdbf7b439a3d5577536120",
+      "shared_setup_sha256": "f69b88d037b7c2dc5f7445df054b3e9676522c51af31ace3636efc5a2dfe936b",
+      "source": "SoC_ConditionvCodes2_Five_Stage_Rebuild.ipynb"
+    },
+    "05_five_representations.py": {
+      "original_notebook_cell": 12,
+      "scientific_cell_sha256": "e175b8cf0803cd06643d20603cb6108207f2fe2282bc68f1466dbdc8f03acee6",
+      "shared_setup_sha256": "f69b88d037b7c2dc5f7445df054b3e9676522c51af31ace3636efc5a2dfe936b",
+      "source": "SoC_ConditionvCodes2_Five_Stage_Rebuild.ipynb"
+    }
+  },
+  "upstream_scripts": {
+    "R2_cycle_reconstruction_clean.py": "99948721076ebf0888deee73d6fed35cf57246fef9ac029fe395bca0e50f30ef",
+    "R2_2_global_reconstruction_clean.py": "315128ef747d3d3bd7482cea4129f91b92a2bf48759fa9269048b29e9e172285"
+  },
+  "audited_results_origin": {
+    "archive": "SoC_Final_Submission_20261018T190535Z.zip",
+    "verification": "original manifest entry SHA256"
+  },
+  "notes": "19 October source archive supplied separately from 18 October canonical audited output data"
+}

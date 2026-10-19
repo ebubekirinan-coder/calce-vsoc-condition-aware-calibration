@@ -1,0 +1,22 @@
+{
+  "source": "SoC_Final_Submission_20261018T190535Z.zip",
+  "files": {
+    "figures/family_02_T_sweep.png": "90afb3f7fbcee007f7d8617396decc9b892744579dbd13b333727edc31c8a5c5",
+    "figures/family_05_T_sweep.png": "9c58b2778e6ee27fd627f656b3df69d0616fa2b544cadd8dbb5b27c833855ba5",
+    "figures/family_08_Rate_sweep.png": "7ca6f7bdf5e0b1ba9ecb16230f24c959650f082168da55a582bb6f924b4c5764",
+    "figures/family_18_Rate_sweep.png": "c501efb1effe3eeeae093f3f16631fcc216fa5118de71d42e08217944918cae0",
+    "figures/family_19_DR_sweep.png": "e69bf8f08693794290e2fe3643a809256ac5fbd1e1d5c13fecdd291bc05d7478",
+    "figures/family_26_DR_sweep.png": "2ace680a7b3e687f89c1863b2e6d345bef9f6be8e16f96bce19a89dc65a16917",
+    "figures/fig_lut_cell_support.png": "e418410ae42f3be6782a923a674e1c6b594b1909f0393aa94b2c99620f095aa1",
+    "figures/fig_thermal_model_sensitivity.png": "1262717226b0fc8662ae61d1434f29d6582ba337f15ac0565aea39bbd9733518",
+    "lut/final_LUT_0_90_float32.npy": "2dc424f9e539cea6d37ea57ca64eb7a35d689467d6495dbd622c3093e3e6a2ba",
+    "lut/final_LUT_0_90_matrix.csv": "bdaeca1089306d474422d0457d553a37716d1c9132fae1db0219c06e59f49f32",
+    "supplementary/Table_S1_81_planned_contrasts.csv": "2b6d9681bfe275f605c758b05f26019c50063da04403278d61da343cb75460da",
+    "supplementary/Table_S2_6_descriptive_contrasts.csv": "ecf070f9bbda7996c093323d9101155aece42c2040a092c47db44873f8c55933",
+    "supplementary/contrast_results.csv": "e7941a8f3747dd6eb17e1551f7713edd27c554470b22a4698e7063b690cc7dc6",
+    "supplementary/representation_common_five.csv": "f80eeab562fc78e03c35478a65dca0c0323b90ce3a1f451d297c1350f6ce0482",
+    "supplementary/representation_gains.csv": "66f8a488ddd570a4607423a9e0c97364a1cb9a707fd0d5db28246bac9ee9c6d8",
+    "supplementary/validation_by_condition.csv": "0411f7a3d6422c14aad10a6840e35fcff1ef0d9fc875d495ebbd8cb6e1c276a5",
+    "supplementary/validation_summary.csv": "36767ca89600a4f435cf0ef05590e52ef12c779837b8fcfce85e79e3389badfc"
+  }
+}
