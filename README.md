@@ -1,124 +1,61 @@
-# Condition-Aware V-SoC Calibration for CALCE LiCoO2/Graphite Cells
+# Condition-dependent dynamic V–SoC profiles: CALCE reproducibility code
 
-This repository contains the reproducibility code for the manuscript:
+Code and selected verification outputs for the manuscript **“Condition-Dependent Dynamic Voltage–State-of-Charge Profiles in Lithium-Ion Batteries: Cell-Level Inference and Compact LUT Calibration.”**
 
-**Condition-Aware V-SoC Calibration for Li-ion Batteries: Analysis of a Controlled 4x2x3 CALCE Factorial Dataset**
+## Publication scope
 
-The code supports dataset consistency checks, representative-cell selection, condition-family voltage--SoC visualization, statistical analysis, sparse gated correction, and condition-indexed isotonic LUT construction for condition-aware voltage-reference calibration.
+The investigated CALCE LiCoO₂/graphite data cover a 4 × 2 × 3 factorial design: temperature 10/25/45/60 °C, charge cut-off C/5 or C/40, and discharge 0.7C/1C/2C. The source Excel field `Rate` refers to charge cut-off, while `Charge_Rate` refers to discharge rate. R2.2 contains **83,045 nominal-concordant physical cycles from 180 cells** in 24 conditions. The canonical dynamic terminal-voltage LUT covers **SoC 0–90% inclusive**, with **24 × 91 Float32** values.
 
-## Scope
+The primary analysis plans 81 SoC-band contrasts (75 inferentially eligible, 6 descriptive); 42 eligible 2C contrasts retain their sign and bootstrap confidence intervals excluding zero across four predefined model analyses at Cycle_Index 108. Condition-specific isotonic MAEs for the 52–132-cycle subset are **4.353667, 18.041400, 33.189926 mV** under LOCO / rate hold-out / temperature hold-out, respectively. These correspond to **95.80%, 81.86%, 62.85%** lower MAE than globally pooled isotonic representation on a common finite-node support. These are validation estimates, not real-time embedded-device guarantees.
 
-This repository contains code and lightweight reproducibility outputs. The large processed Excel input files are not redistributed in this repository due to file-size and data-hosting constraints.
+### Repository status
 
-The original CALCE battery dataset and the associated Mendeley Data record are cited in the manuscript. The processed intermediate files generated in this study are available from the corresponding author upon reasonable request.
+- The source-aligned analyses and chosen outputs correspond to the previously validated October 2026 research results.
+- The small files in `supplementary/`, `lut/`, `figures/` were copied byte-for-byte from the **independently audited 2026-10-18 submission ZIP** and verified against its manifest. The 2026-10-19 repackaging passed its own Colab QA; its new archive bytes are not silently substituted in this repository.
+- A completely fresh Colab **end-to-end run of this assembled repository** is still a release gate. Source code is made available with its original per-cell provenance. Full scientific stage archives, raw workbooks, and 39 MB cycle store are not tracked in Git.
+- Older representative-cell, sparse gated correction and 0–100 LUT code/output artifacts are preserved in `legacy/2026-07-representative-gated/` and are **not sources for current manuscript results**.
 
-## Required input files
+## Dependencies and data access
 
-The workflow expects the following local input files:
+Python 3 with NumPy, pandas, scikit-learn, SciPy, statsmodels, matplotlib, openpyxl, threadpoolctl. Install via `python -m pip install -r requirements.txt` in a virtual environment or Colab runtime. See `data_manifest/input_files_required.txt`. Obtain `Processed_Outputv3_1.xlsx`, `_2.xlsx`, `_3.xlsx` from the processed CALCE dataset provenance described in the manuscript. These large workbooks are **not included**. Do not interpret missing workbooks as reusable or imputed data.
 
-- `Processed_Outputv3_1.xlsx`
-- `Processed_Outputv3_2.xlsx`
-- `Processed_Outputv3_3.xlsx`
+## Run order (Google Colab recommended)
 
-These files should be placed in the repository root when running the notebooks locally or in the configured project root when running in Google Colab.
+1. Open `notebooks/00_R2_to_R2_2_upstream.ipynb` and run its cells top-to-bottom in **one Colab session**, uploading the three source Excel files. R2.2 depends on the Python functions and calibration variables created by R2. Do not execute the R2.2 `.py` alone in a fresh process.
+2. Run `scripts/upstream/R4B_broad_52_132_clean.py` to produce the 52–132 window profiles. The script's default local output directory is `outputs/R4B_broad_52_132`; place the CSV at `/content/outputs/R4B_broad_52_132/broad_52_132_cell_profiles.csv` for the standard five-stage Colab notebook, or configure `VSOC_OUTPUT_DIR` accordingly.
+3. Run `notebooks/01_to_05_scientific_rebuild.ipynb` **sequentially**. All five stages should run in the same runtime; the Stage 02 runner requires 01's ZIP and stages 04/05 require 03's ZIP. The code fails without overwriting a nonempty prior stage directory / ZIP.
+4. After checking five scientific stage outputs, run `notebooks/final_package.ipynb` or `scripts/publication/build_final_submission.py`. This v3 packager verifies known scientific payload SHA256 values, key analyses, and Lut equivalence before producing a submission ZIP. A new ZIP may have a different container SHA even when audited scientific members match exactly.
+5. Run `python -m unittest discover -s tests -v` to verify included publication results and original code fingerprints. Tests of packaged outputs are lightweight and do not replace a full CALCE data re-run.
 
-## Key reproducibility checks
+**Stage dependency table**
 
-Using the processed input files, the consistency-check pipeline reports:
+| Stage | Purpose | Input | Standard archive |
+|---|---|---|---|
+| 01 | SoC-band 80% coverage and primary contrasts | R2.2 global PKL | `SoC_band_coverage_ConditionvCodes2.zip` |
+| 02 | Age/sensitivity (4 models) | 01 ZIP | `SoC_age_sensitivity_ConditionvCodes2.zip` |
+| 03 | Unified LUT, LOCO, rate, temperature hold-out | R2.2 full cells + R4B cells CSV | `SoC_unified_ConditionvCodes2.zip` |
+| 04 | Fixed-prediction support audit | 03 ZIP | `SoC_coverage_audit_ConditionvCodes2.zip` |
+| 05 | Five-representation common-node comparison | 03 ZIP | `SoC_step5_ablation_ConditionvCodes2.zip` |
 
-- 2,358,728 processed records
-- 181 unique sample numbers
-- sample-number range: 1--187
-- cycle-index range: 1--611
+## Scientific outputs in this repository
 
-After block-aware representative-cell selection:
+- `supplementary/contrast_results.csv`: four-model / age-time inferential contrast table (486 rows, includes 81 reference contrasts).
+- `supplementary/validation_by_condition.csv`: validation by condition, methods, support, and scope.
+- `supplementary/representation_gains.csv`: paired physical-cell bootstrap common-five-model MAE gains.
+- `supplementary/Table_S1_81_planned_contrasts.csv` and `Table_S2_6_descriptive_contrasts.csv`: reference cycle 108; inferential fields are explicitly not applicable to the six descriptive contrasts.
+- `lut/final_LUT_0_90_float32.npy` plus readable CSV matrix. No extrapolation to SoC 90–100.
+- `figures/`: exactly the eight figures cited in the current manuscript (the 31-figure submission archive remains separately preserved).
 
-- 309,055 retained records before discharge-only filtering
-- 25 globally unique representative sample identifiers
-- 24 / 24 nominal operating conditions covered
+## Traceability and cautions
 
-After restricting the workflow to discharge-only records:
+- `data_manifest/archived_submission_manifest_2026-10-18.json`: approved scientific input fingerprints and SHA256 for source publication members.
+- `data_manifest/audited_repo_payload_sha256.json`: strict SHA256 for selected publication members committed in this repository.
+- `docs/CODE_PROVENANCE.md` and `docs/CODE_PROVENANCE.json`: original Colab source snapshot and stage-cell fingerprints.
+- `docs/METHODS_TO_CODE.md`: manuscript methodology / executable block crosswalk.
+- `docs/VALIDATION_LEDGER.md`: six validation MAEs, 42 contrasts, LUT and coverage milestones.
+- Source Excel workbooks, intermediate PKL/ZIP archives, and other third-party data may require separate distribution permissions. The repository carries no raw cell measurement rows. Only load trusted R2.2 pickles.
+- This repository's existing **MIT** license applies to its code; it does not override rights in source CALCE datasets.
 
-- 309,020 discharge-only analysis records
+## Citation
 
-## Main outputs reproduced by the code
-
-### Section 6: Sparse gated correction experiment
-
-The sparse gated correction experiment applies conservative thermal and rate-history corrections only in measured, non-negligible operating contexts.
-
-Overall sparse gated correction results:
-
-- Baseline MAE/RMSE = 0.130499 / 0.164297 V
-- Thermal MAE/RMSE = 0.129149 / 0.163376 V
-- RateHist MAE/RMSE = 0.129797 / 0.163788 V
-- Both MAE/RMSE = 0.128447 / 0.162864 V
-
-Ablation versus baseline:
-
-- Thermal Delta MAE = 1.350 mV
-- Thermal Delta RMSE = 0.921 mV
-- RateHist Delta MAE = 0.702 mV
-- RateHist Delta RMSE = 0.510 mV
-- Both Delta MAE = 2.052 mV
-- Both Delta RMSE = 1.434 mV
-- Both correction coverage = 510 corrected evaluation points
-
-### Section 7: Measured-grid isotonic LUT evaluation
-
-The condition-indexed isotonic LUT atlas is evaluated as a non-held-out measured-grid reconstruction. These results quantify in-grid reconstruction fidelity, not predictive generalization to unseen cells, cycles, temperatures, or operating tuples.
-
-Overall measured-grid LUT evaluation:
-
-- Baseline MAE/RMSE = 0.125735 / 0.161573 V
-- Thermal MAE/RMSE = 0.089544 / 0.125924 V
-- T+Rate MAE/RMSE = 0.010742 / 0.035762 V
-
-Ablation versus baseline:
-
-- Thermal Delta MAE = 36.19 mV
-- Thermal Delta RMSE = 35.65 mV
-- Thermal MAE/RMSE reduction = 28.78% / 22.06%
-- T+Rate Delta MAE = 114.99 mV
-- T+Rate Delta RMSE = 125.81 mV
-- T+Rate MAE/RMSE reduction = 91.46% / 77.87%
-
-Bootstrap diagnostics:
-
-- Thermal Delta MAE 95% CI = [34.39, 38.18] mV
-- T+Rate Delta MAE 95% CI = [112.93, 117.25] mV
-- Paired Wilcoxon signed-rank tests give p < 1e-6 for both calibrated variants.
-
-  Files containing legacy_do_not_use are retained only for audit trail and are not used in the manuscript.
-
-## Repository structure
-
-```text
-calce-vsoc-condition-aware-calibration/
-├── README.md
-├── LICENSE
-├── CITATION.cff
-├── .zenodo.json
-├── requirements.txt
-├── .gitignore
-├── notebooks/
-│   ├── 01_dataset_consistency_check.ipynb
-│   ├── 02_representative_cell_selection.ipynb
-│   ├── 03_condition_family_visualization.ipynb
-│   ├── 04_section5_statistical_analysis.ipynb
-│   ├── 05_section6_calibration_evaluation.ipynb
-│   └── 06_section7_lut_profile_evaluation.ipynb
-├── outputs_minimal/
-│   ├── representative_condition_coverage.csv
-│   ├── overall_metrics.csv
-│   ├── bandwise_metrics.csv
-│   ├── ablation_vs_baseline.csv
-│   ├── bandwise_delta_mae_vs_baseline_mV.csv
-│   ├── lut_specification.csv
-│   ├── overall_metrics_from_pred.csv
-│   ├── sec7_ablation_vs_baseline.csv
-│   ├── sec7_bandwise_delta_mae_mV.csv
-│   └── sec7_bootstrap_wilcoxon.csv
-└── data_manifest/
-    ├── input_files_required.txt
-    └── processed_output_sha256_manifest.csv
+See `CITATION.cff`. Repository contributors and affiliations were retained from the prior revision; manuscript bibliographic details and a formal software release identifier should be updated when assigned, rather than invented in advance.

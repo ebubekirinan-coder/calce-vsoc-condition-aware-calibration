@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-title: "Reproducibility code for condition-aware CALCE LiCoO2/graphite V-SoC calibration"
-message: "If you use this software, please cite it using the metadata from this file."
+title: "Source code and validation artifacts for condition-dependent dynamic CALCE voltage–SoC profiles"
+message: "If you use this software, please cite the corresponding repository and, when published, the associated manuscript."
 type: software
 authors:
   - family-names: "Inan"
@@ -11,17 +11,14 @@ authors:
     given-names: "Saadin"
   - family-names: "Biçer"
     given-names: "Emre"
-version: "1.0.0"
-date-released: "2026-07-01"
 license: "MIT"
 repository-code: "https://github.com/ebubekirinan-coder/calce-vsoc-condition-aware-calibration"
-abstract: "This repository contains reproducibility code for dataset consistency checks, representative-cell selection, condition-family visualization, statistical analysis, sparse gated correction, and isotonic LUT construction for condition-aware V-SoC calibration of CALCE LiCoO2/graphite lithium-ion battery data."
+abstract: "Reconstruction, cell-clustered inference, four-model age sensitivity, LOCO and held-out unified weighted-isotonic validation, fixed-prediction support audit, and five-representation comparison of CALCE dynamic terminal-voltage versus state-of-charge data."
 keywords:
   - lithium-ion battery
-  - voltage-SoC calibration
+  - dynamic voltage-SoC
   - CALCE
-  - condition-aware calibration
+  - cell-level inference
+  - leakage-safe validation
   - isotonic regression
   - lookup table
-  - representative-cell selection
-  - sparse gated correction

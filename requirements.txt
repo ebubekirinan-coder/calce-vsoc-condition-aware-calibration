@@ -1,3 +1,5 @@
+# Scientific Python dependencies; exact runtime package versions are recorded in
+# stage audit artifacts, not inferred from a different Colab environment.
 numpy
 pandas
 scipy
@@ -5,4 +7,5 @@ scikit-learn
 statsmodels
 matplotlib
 openpyxl
+threadpoolctl
 pyarrow

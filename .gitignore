@@ -1,28 +1,22 @@
-# ============================================================
-# Project-specific ignores for CALCE V-SoC calibration
-# ============================================================
-
-# Large processed working input files
+# Original CALCE processed measurements / intermediate files
 Processed_Outputv3_*.xlsx
-
-# Generated full output directories
+data/raw/
+data/interim/
 outputs/
-sec5_outputs/
-sec6_outputs/
-sec7_outputs/
-
-# Generated archives
+revision_R2_final_profiles/
+revision_R2_2_global/
+SoC_Rebuild_ConditionvCodes2/
+# scientific intermediate archives remain in external audit storage
 *.zip
-
-# Colab / notebook temporary files
+*.pkl
+*.pickle
+# standard Python / notebook scratch
+__pycache__/
+*.pyc
+.pytest_cache/
 .ipynb_checkpoints/
-*.ipynb_checkpoints/
-
-# OS/editor files
 .DS_Store
 Thumbs.db
-
-# Temporary local scratch files
 tmp/
 temp/
 scratch/
