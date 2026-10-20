@@ -17,7 +17,7 @@ The primary analysis plans 81 SoC-band contrasts (75 inferentially eligible, 6 d
 
 ## Dependencies and data access
 
-Python 3 with NumPy, pandas, scikit-learn, SciPy, statsmodels, matplotlib, openpyxl, threadpoolctl. Install via `python -m pip install -r requirements.txt` in a virtual environment or Colab runtime. See `data_manifest/input_files_required.txt`. Obtain `Processed_Outputv3_1.xlsx`, `_2.xlsx`, `_3.xlsx` from the processed CALCE dataset provenance described in the manuscript. These large workbooks are **not included**. Do not interpret missing workbooks as reusable or imputed data.
+Python 3 with NumPy, pandas, scikit-learn, SciPy, statsmodels, matplotlib, openpyxl, threadpoolctl. Install via `python -m pip install -r requirements.txt` in a virtual environment or Colab runtime. See `data_manifest/input_files_required.txt`. The three processed analysis-input workbooks (`Processed_Outputv3_1.xlsx`, `Processed_Outputv3_2.xlsx`, and `Processed_Outputv3_3.xlsx`) were prepared from the original CALCE experimental records, including cycle-by-cycle discharged-capacity-based SoC calculation. These workbooks are **not included** in this repository because of their size. **They are available from the corresponding author upon reasonable request. To request the files for independent scientific verification, email [ebubekirinan@kayseri.edu.tr](mailto:ebubekirinan@kayseri.edu.tr).** The public CALCE source data and the processed analysis inputs are distinct. Requests will be handled consistently with applicable CALCE data-use terms. Do not interpret missing workbooks as reusable or imputed data.
 
 ## Run order (Google Colab recommended)
 
