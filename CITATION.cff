@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Source code and validation artifacts for condition-dependent dynamic CALCE voltage–SoC profiles"
+title: "Code, supplementary R1–R3 analyses and validation artifacts for condition-dependent CALCE dynamic voltage–SoC profiles"
 message: "If you use this software, please cite the corresponding repository and, when published, the associated manuscript."
 type: software
 authors:
@@ -13,7 +13,7 @@ authors:
     given-names: "Emre"
 license: "MIT"
 repository-code: "https://github.com/ebubekirinan-coder/calce-vsoc-condition-aware-calibration"
-abstract: "Reconstruction, cell-clustered inference, four-model age sensitivity, LOCO and held-out unified weighted-isotonic validation, fixed-prediction support audit, and five-representation comparison of CALCE dynamic terminal-voltage versus state-of-charge data."
+abstract: "Reconstruction, cell-clustered inference, four-model age sensitivity, LOCO and held-out unified weighted-isotonic validation, fixed-prediction support audit, five-representation comparison, small-cluster CR2/Satterthwaite sensitivity, nodewise ridge benchmark and held-out LUT compression of CALCE dynamic terminal-voltage versus state-of-charge data."
 keywords:
   - lithium-ion battery
   - dynamic voltage-SoC
@@ -22,3 +22,6 @@ keywords:
   - leakage-safe validation
   - isotonic regression
   - lookup table
+  - ridge regression
+  - Satterthwaite CR2
+  - LUT compression

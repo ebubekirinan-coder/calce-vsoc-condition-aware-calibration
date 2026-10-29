@@ -1,0 +1,29 @@
+{
+  "description": "Integrity fingerprints for unmodified R1/R2/R3 supplementary source scripts, computed result files and original README. These are not independent rerun hashes.",
+  "source": "SETA_R123_Supplementary_2026-10-25(1).zip",
+  "files": {
+    "scripts/r123/r1_cr2.py": "bb63942e35f12f2dc8c6b984d92db723e76f9ff73493d97946693f3d4ac9a0d5",
+    "scripts/r123/r1_welch.py": "4759bd09379db6dd8d9fd45a29c1c568784895a0f18564e2e1c9a220450100a4",
+    "scripts/r123/r2_axis.py": "6be10103f2184f9583cefdd57258a408b6f64d29283d21c24f8975f018236042",
+    "scripts/r123/r2_postaudit.py": "aa824193d62a78180ac43c0a17aad8dfa12a75406d97be92c5926addfa5c9f65",
+    "scripts/r123/r2_ridge.py": "2a58f2a76df6845b3ff3bb991bce96272eba6b49ee88e55b3499c04900f8ace6",
+    "scripts/r123/r3_heldout.py": "6b447af83933ad11430535cb2760190b478e707ec80c08756d2f910ebb2e1a9a",
+    "supplementary/R123/R1_CR2_all_models_972.csv": "1a467dd51c4231c4a91002642d91e53655c286ec0d3867d0d10cceb771052331",
+    "supplementary/R123/R1_cell_level_Welch_secondary.csv": "02b93ef22e32d422da9fd4784a23d3ce2ea8e6ad9c982a7e725d361fa27e5300",
+    "supplementary/R123/R1_run_config.json": "f82153b69ff2dfe0219af42a06e7e4402b1712a7847ea718504a2976c33583ff",
+    "supplementary/R123/R1_small_cell_leave_one_out.csv": "b06e932c7222e0fb1d4c0b4b1f8ebf867d88c64eadcc088a2fb203d6906cf82b",
+    "supplementary/R123/R1_summary_recomputed.csv": "3ff080fcdcfba34dd7b06fee5a11939bce3c3536a2b25ff661dedb6cb0dcaf0f",
+    "supplementary/R123/R2_B3_conditional_paired_bootstrap.csv": "b0a09ca8e7b1ce4157c9fec67b2118c66f70b7556b791961fcda79805d816e39",
+    "supplementary/R123/R2_B3_run_manifest.json": "3692c4e785d3fb52891e27eb26232b1ba9fb09b360dff259090e4f3c959d79fb",
+    "supplementary/R123/R2_B3_support_summary.csv": "c07a114bc45b2b1ec03738a11ad3193bcfcbbd0de7045a5018b23a3d5da9f01b",
+    "supplementary/R123/R2_axis_controls_summary.csv": "8c5352c07de42a256b848e01ef181742d798dc0d3048651c597bcacee0d0d297",
+    "supplementary/R123/R2_compact_comparison.csv": "13de2671691af17525df3e6296fa668060880113c48f4238f6be06f2fdbc18d0",
+    "supplementary/R123/R3_LOCO_compact_comparison.csv": "82f9ef391c489b7879df7c1e52eb8af2aad6881a3fa7f41c61755c3126c21274",
+    "supplementary/R123/R3_OOF_common_support.csv": "7860bc0a528b27d06698207e8087f536e9c5e23589a2ccf3922823dda22df38b",
+    "supplementary/R123/R3_OOF_own_support.csv": "d76e4a3afdc8be159416a38f7cb3f209008026a8e1a2502042803e4ac50ded07",
+    "supplementary/R123/R3_run_manifest.json": "226b2fd74eafd6ac82dd7553d3df1794389ba97267256c797aa0374ea6c8e968",
+    "supplementary/R123/R3_storage_budget.csv": "2f7fc091247e86f5ba4687d22903ce10fa669e2ebc596024a6e9da01c4aab903",
+    "supplementary/R123/README.md": "89b2168ecbd5758cab0bc4b60c8169675e5a25c2c5afbc33fd6a45fed0104011",
+    "supplementary/R123/REPRO_MANIFEST.json": "a5ba561d32875a510207b680dc830d869866e5651a59658bbff0b0c01726cadf"
+  }
+}

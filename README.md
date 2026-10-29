@@ -59,3 +59,17 @@ Python 3 with NumPy, pandas, scikit-learn, SciPy, statsmodels, matplotlib, openp
 ## Citation
 
 See `CITATION.cff`. Repository contributors and affiliations were retained from the prior revision; manuscript bibliographic details and a formal software release identifier should be updated when assigned, rather than invented in advance.
+
+## Additional R1–R3 analyses (25 October 2026)
+
+The **R1/R2/R3 supplement** extends the publication's main five-stage workflow. Its source files are preserved without modification in [`scripts/r123/`](scripts/r123/); all 16 result and run-manifest files, plus their original README, are in [`supplementary/R123/`](supplementary/R123/). Source-code SHA-256 fingerprints are recorded in [`REPRO_MANIFEST.json`](supplementary/R123/REPRO_MANIFEST.json). The three unchanged legacy/core CSV files remain at the `supplementary/` root; they are not duplicated inside R123.
+
+| Extension | Analysis | Relevant evidence |
+|---|---|---|
+| **R1** | CR2/Satterthwaite small-cluster and physical-cell Welch / deletion sensitivity | `R1_summary_recomputed.csv`: 75/81 contrasts eligible; **42/42** eligible 2C discharge-rate contrasts CR2/BH-supported across all four history models |
+| **R2** | Seven-coefficient nodewise ridge with inner three-fold cell CV, paired out-of-fold comparisons, rate/temperature interpolation-axis controls | `R2_compact_comparison.csv`: LUT lower matched-node MAE than this ridge in all six evaluations |
+| **R3** | Held-out, common-node LUT storage and interpolation comparison (13 representations) | `R3_LOCO_compact_comparison.csv` and `R3_storage_budget.csv`: 52–132 LOCO original float32 **8.53 KiB / 4.260 mV** versus float32 2-point PCHIP **4.31 KiB / 4.307 mV** and float16 1-point **4.27 KiB / 4.301 mV** |
+
+**Scope/limits.** Results derive from verified intermediate ZIP archives, not a fresh run from raw CALCE data. The prerequisite `SoC_band_coverage_ConditionvCodes2.zip` (R1) and `SoC_unified_ConditionvCodes2.zip` (R2/R3) are **not redistributed in this repository**. Most R1/R2/R3 scripts retain original Colab `/content/SETA_R123_REPRO_20261025T184824Z/` paths to preserve source fingerprints; they are **not portable CLI programs as-is**. The source environment was Python 3.13.16, whereas GitHub Actions runs static/artifact checks on Python 3.11. Neither CI success nor hash correspondence proves fresh end-to-end re-execution. See [`docs/R123_REPRODUCIBILITY.md`](docs/R123_REPRODUCIBILITY.md) for provenance and execution order.
+
+The validated target is retrospective, capacity-normalized dynamic terminal voltage and **not** online SoC estimation. CR1/cell bootstrap remain the primary inference; CR2 is an additional sensitivity analysis. LUT storage represents voltage arrays only, excluding masks and executable/runtime overhead.

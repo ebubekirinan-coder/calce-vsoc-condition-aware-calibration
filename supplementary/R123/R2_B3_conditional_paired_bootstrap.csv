@@ -1,0 +1,7 @@
+analysis,validation,n_cells,mean_B3_minus_B0_MAE_mV,pointwise_CI_low_mV,pointwise_CI_high_mV,B3_worse_than_B0_fraction,bootstrap_positive_fraction,qualifier
+broad_52_132,LOCO,179,22.407528743740134,21.559442339767674,23.195049818203472,0.9497206703910615,1.0,Condition-stratified paired-cell fixed-OOF-error bootstrap; excludes training uncertainty and shared-training-fold dependence
+broad_52_132,rate_holdout,62,12.457237409028028,10.572942037790497,14.148049937902046,0.7419354838709677,1.0,Condition-stratified paired-cell fixed-OOF-error bootstrap; excludes training uncertainty and shared-training-fold dependence
+broad_52_132,temperature_holdout,96,2.464036248823794,2.104884854625071,2.8280987409835645,0.59375,1.0,Condition-stratified paired-cell fixed-OOF-error bootstrap; excludes training uncertainty and shared-training-fold dependence
+full_history,LOCO,180,20.337147849438622,19.139022764891596,21.39354471630333,0.9166666666666666,1.0,Condition-stratified paired-cell fixed-OOF-error bootstrap; excludes training uncertainty and shared-training-fold dependence
+full_history,rate_holdout,62,10.643995644026194,8.822923499789965,12.310222495672079,0.8387096774193549,1.0,Condition-stratified paired-cell fixed-OOF-error bootstrap; excludes training uncertainty and shared-training-fold dependence
+full_history,temperature_holdout,96,2.2825169553831692,1.9175252704377654,2.5940284718732833,0.5833333333333334,1.0,Condition-stratified paired-cell fixed-OOF-error bootstrap; excludes training uncertainty and shared-training-fold dependence

@@ -9,3 +9,11 @@ Five-stage standard script expects R2.2 outputs in /content/revision_R2_2_global
 and window cell profiles in /content/outputs/R4B_broad_52_132/.
 Original workbook fingerprints: processed_output_sha256_manifest.csv.
 Verified publication source fingerprints: archived_submission_manifest_2026-10-18.json.
+
+# Additional R1/R2/R3 intermediate archives (not redistributed)
+# R1: SoC_band_coverage_ConditionvCodes2.zip
+#   SHA-256 b5d8099e62a3a1178d366db44c31930b2ce5cec5b8957a2845f4357e91ef9370
+# R2 and R3: SoC_unified_ConditionvCodes2.zip
+#   SHA-256 ca2e0ebddbf41f4ec67052487efaa580ba5fd313a9b8fa68232333b138594985
+# Original script environment: Python 3.13.16; archive metadata in supplementary/R123/REPRO_MANIFEST.json
+# These inputs are missing from the public repository; R1/R2/R3 are not executable to completion without them.

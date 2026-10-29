@@ -1,0 +1,17 @@
+{
+  "source_zip": "SoC_unified_ConditionvCodes2.zip",
+  "source_zip_sha256": "ca2e0ebddbf41f4ec67052487efaa580ba5fd313a9b8fa68232333b138594985",
+  "source_csv_sha256": {
+    "full_history": "5235543f70469e799149ee81501479f381f22fda1631147ee71028cfd2bdcc0a",
+    "broad_52_132": "30e6ce4552168a77a4ad42fcd50a29e1aef051a8cbd05bf0887ac1d011932659"
+  },
+  "method": "original source code isotonic training-fold reconstruction, then fold-specific downsampling of learned curves",
+  "baseline_parity_max_abs_V": 8.881784197001252e-16,
+  "versions": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3"
+  },
+  "n_cell_metrics": 70200,
+  "all_model_common_evaluation": true,
+  "comment": "R3 exploratory OOF evaluation. The fine-grid support mask is preserved; storage budget excludes mask and runtime."
+}
