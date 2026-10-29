@@ -1,0 +1,14 @@
+model,step_SoC,stored_values,bytes_per_value,payload_KiB,interpolation,excludes_support_masks
+step1_float32_linear,1,2184,4,8.53125,linear,True
+step1_float32_pchip,1,2184,4,8.53125,pchip,True
+step1_float16_linear,1,2184,2,4.265625,linear,True
+step1_float16_pchip,1,2184,2,4.265625,pchip,True
+step2_float32_linear,2,1104,4,4.3125,linear,True
+step2_float32_pchip,2,1104,4,4.3125,pchip,True
+step2_float16_linear,2,1104,2,2.15625,linear,True
+step2_float16_pchip,2,1104,2,2.15625,pchip,True
+step5_float32_linear,5,456,4,1.78125,linear,True
+step5_float32_pchip,5,456,4,1.78125,pchip,True
+step5_float16_linear,5,456,2,0.890625,linear,True
+step5_float16_pchip,5,456,2,0.890625,pchip,True
+B0_original,1,2184,4,8.53125,linear,True

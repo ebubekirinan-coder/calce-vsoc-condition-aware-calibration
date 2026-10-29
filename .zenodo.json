@@ -1,7 +1,7 @@
 {
   "title": "Source code for condition-dependent dynamic voltage–state-of-charge CALCE profiles",
   "upload_type": "software",
-  "description": "Source-aligned CALCE nominal-concordant cycle reconstruction, cell-clustered SoC-band inference, unified weighted-isotonic LUT validation (LOCO, rate and temperature hold-outs), fixed-prediction support analysis and five-representation comparison. Historical July 2026 source preserved in legacy.",
+  "description": "Source-aligned CALCE nominal-concordant cycle reconstruction, cell-clustered SoC-band inference, unified weighted-isotonic LUT validation (LOCO, rate and temperature hold-outs), fixed-prediction support analysis and five-representation comparison. Historical July 2026 source preserved in legacy. Additional October 2026 supplementary analyses: CR2/Satterthwaite small-cluster sensitivity, seven-coefficient nodewise ridge benchmark with cell-level inner cross-validation and log-rate/reciprocal-temperature interpolation-axis controls, and 13 held-out LUT compression representations. Source integrity, input requirements, and rerun limits are documented in the repository.",
   "creators": [
     {
       "name": "Inan, Ebubekir",
@@ -29,7 +29,10 @@
     "condition-aware LUT",
     "cell-level inference",
     "isotonic regression",
-    "held-out validation"
+    "held-out validation",
+    "CR2/Satterthwaite",
+    "ridge regression",
+    "held-out LUT compression"
   ],
   "related_identifiers": [
     {

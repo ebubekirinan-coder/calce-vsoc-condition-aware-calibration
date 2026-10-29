@@ -1,0 +1,25 @@
+{
+  "source_zip_name": "SoC_band_coverage_ConditionvCodes2.zip",
+  "sha256": "b5d8099e62a3a1178d366db44c31930b2ce5cec5b8957a2845f4357e91ef9370",
+  "source_processed_sha256": "4fcf66cd4e93a2fa8c08cef70ac6a87b86c3e1cc157ca301178a008d80501475",
+  "fit_models": [
+    "reference",
+    "condition_slopes",
+    "cell_balanced",
+    "window_52_132"
+  ],
+  "bands": [
+    "0-20",
+    "20-60",
+    "60-90"
+  ],
+  "working_covariance": "identity on weighted observations; longitudinal within-cell independence is a WORKING assumption, NOT verified",
+  "adjustment": "CR2 generalized inverse on perfectly leveraged singular cells; primary sensitivity C5_removed=True",
+  "sat_df": "trace(K)^2 / trace(K^2) with K_ij = d_i delta_ij - v_i.v_j",
+  "BH_family": 81,
+  "models_original_and_sensitivity": "two fit variants per band/model",
+  "n_raw_rows": 237659,
+  "CR1_ref_max_effect_repro_error_mV": 3.4992808650713414e-10,
+  "CR1_ref_max_se_repro_error_mV": 5.943245895423388e-12,
+  "time_elapsed_sec": 15.02064037322998
+}

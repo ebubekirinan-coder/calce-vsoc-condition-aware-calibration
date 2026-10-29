@@ -14,3 +14,16 @@
 | Submission ZIP independent integrity | `scripts/publication/audit_final_submission.py` | Hash-checked payloads and manifest consistency |
 
 The historical R9/R10/R11 quality-assurance utilities remain under `scripts/upstream/` for audit reference. They are not substitutes for the canonical Unified output.
+
+## Post hoc R1–R3 manuscript extensions
+
+| Manuscript method / result | Preserved executable script | Verified supporting results | Limitation |
+|---|---|---|---|
+| CR2/Satterthwaite, BH-81, C5 generalised-inverse sensitivity | `scripts/r123/r1_cr2.py` | `supplementary/R123/R1_CR2_all_models_972.csv`; `R1_summary_recomputed.csv`; `R1_run_config.json` | 42/42 refers specifically to 2C–1C and 0.7C–2C discharge-rate contrasts |
+| Physical-cell Welch and leave-one-cell-out sensitivity | `scripts/r123/r1_welch.py` and `r1_cr2.py` | `R1_cell_level_Welch_secondary.csv`; `R1_small_cell_leave_one_out.csv` | No independent-cell replication created |
+| Nodewise ridge with three-fold inner cell CV and external hold-outs | `scripts/r123/r2_ridge.py` | `R2_compact_comparison.csv`; `R2_B3_support_summary.csv`; `R2_B3_run_manifest.json` | Comparison limited to specified seven-coefficient ridge |
+| Fixed OOF paired-cell bootstrap and coefficient packaging | `scripts/r123/r2_postaudit.py` | `R2_B3_conditional_paired_bootstrap.csv` | Fixed-prediction conditional bootstrap |
+| Log-rate and reciprocal-temperature LUT interpolation | `scripts/r123/r2_axis.py` | `R2_axis_controls_summary.csv` | No inferred electrochemical mechanism |
+| 13 held-out LUT storage/interpolation variants | `scripts/r123/r3_heldout.py` | `R3_OOF_common_support.csv`; `R3_OOF_own_support.csv`; `R3_LOCO_compact_comparison.csv`; `R3_storage_budget.csv` | Voltage-array bytes only, preserve support mask |
+
+Full file lineage, original source hashes, and missing input dependencies are documented in `supplementary/R123/REPRO_MANIFEST.json` and `docs/R123_REPRODUCIBILITY.md`. The stage-01–05 provenance manifest is unchanged.

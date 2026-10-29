@@ -1,0 +1,5 @@
+model,eligible,CR1_BH_supported,CR2_BH_supported,2C_CR2_supported
+cell_balanced,75,67,67,42
+condition_slopes,75,70,68,42
+reference,75,66,66,42
+window_52_132,75,73,73,42

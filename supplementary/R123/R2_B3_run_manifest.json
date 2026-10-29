@@ -1,0 +1,42 @@
+{
+  "source": "/content/SETA_R123_REPRO_20261025T184824Z/inputs/SoC_unified_ConditionvCodes2.zip",
+  "source_sha256": "ca2e0ebddbf41f4ec67052487efaa580ba5fd313a9b8fa68232333b138594985",
+  "source_csv_sha256": {
+    "cell_profiles_nominal_concordant.csv": "5235543f70469e799149ee81501479f381f22fda1631147ee71028cfd2bdcc0a",
+    "broad_52_132_cell_profiles.csv": "30e6ce4552168a77a4ad42fcd50a29e1aef051a8cbd05bf0887ac1d011932659"
+  },
+  "script": "r2_ridge.py",
+  "fixed_protocol_date": "2026-10-21",
+  "seed": 20261021,
+  "n_outer_folds": 365,
+  "inner_cv": 3,
+  "alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "features": [
+    "1/T_K",
+    "log_discharge_Crate",
+    "cutoff_C40",
+    "log_rate/T_K",
+    "cutoff_C40/T_K",
+    "cutoff_C40*log_rate"
+  ],
+  "model": "nodewise ridge; physical cell independent row",
+  "intercept_regularized": false,
+  "support_rule": "No SoC extrapolation: no finite training voltage at node => NaN",
+  "n_source_nodes": 61425,
+  "n_predicted_nodes": 61425,
+  "runtime_seconds": 6.900588035583496,
+  "all_original_OOF_metrics_matched": true,
+  "research_scope": "offline retrospective-normalized voltage representation; not online BMS evaluation",
+  "notes": [
+    "Outer factor-level holdouts exclude all withheld cells",
+    "Inner folds contain only outer training cells",
+    "Equal cell weighting in metric; alpha selected by cell-level 3-fold CV",
+    "Payload size excludes support masks and model metadata"
+  ]
+}

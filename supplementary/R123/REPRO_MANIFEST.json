@@ -1,0 +1,76 @@
+{
+  "timestamp_utc": "2026-10-25T18:49:12.152833+00:00",
+  "inputs": [
+    {
+      "name": "SoC_unified_ConditionvCodes2.zip",
+      "sha256": "ca2e0ebddbf41f4ec67052487efaa580ba5fd313a9b8fa68232333b138594985",
+      "bytes": 2682944,
+      "n_members": 21
+    },
+    {
+      "name": "SoC_band_coverage_ConditionvCodes2.zip",
+      "sha256": "b5d8099e62a3a1178d366db44c31930b2ce5cec5b8957a2845f4357e91ef9370",
+      "bytes": 9271284,
+      "n_members": 14
+    }
+  ],
+  "python": "3.13.16",
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "sklearn": "1.6.1",
+    "statsmodels": "0.15.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "steps": [
+    {
+      "stage": "R1 CR1/CR2 Satterthwaite + leave-one-cell-out",
+      "exit_code": 0,
+      "log": "r1_cr2.py.log"
+    },
+    {
+      "stage": "R1 fiziksel hucre Welch ikincil duyarlilik",
+      "exit_code": 0,
+      "log": "r1_welch.py.log"
+    },
+    {
+      "stage": "R2 kosul-duyarli ridge B3 (ic CV / dis katlar)",
+      "exit_code": 0,
+      "log": "r2_ridge.py.log"
+    },
+    {
+      "stage": "R2 eslestirilmis bootstrap + nihai katsayi paketi",
+      "exit_code": 0,
+      "log": "r2_postaudit.py.log"
+    },
+    {
+      "stage": "R2 log(rate) ve 1/T enterpolasyon kontrolleri",
+      "exit_code": 0,
+      "log": "r2_axis.py.log"
+    },
+    {
+      "stage": "R3 held-out LUT sikistirma ve PCHIP",
+      "exit_code": 0,
+      "log": "r3_heldout.py.log"
+    }
+  ],
+  "source_code_sha256": {
+    "r1_cr2.py": "bb63942e35f12f2dc8c6b984d92db723e76f9ff73493d97946693f3d4ac9a0d5",
+    "r3_heldout.py": "6b447af83933ad11430535cb2760190b478e707ec80c08756d2f910ebb2e1a9a",
+    "r2_axis.py": "6be10103f2184f9583cefdd57258a408b6f64d29283d21c24f8975f018236042",
+    "r2_postaudit.py": "aa824193d62a78180ac43c0a17aad8dfa12a75406d97be92c5926addfa5c9f65",
+    "r1_welch.py": "4759bd09379db6dd8d9fd45a29c1c568784895a0f18564e2e1c9a220450100a4",
+    "r2_ridge.py": "2a58f2a76df6845b3ff3bb991bce96272eba6b49ee88e55b3499c04900f8ace6"
+  },
+  "checkpoints": {
+    "R1_reference_2C_CR2": 42,
+    "R2_full_LOCO_LUT": 5.240436852444727
+  },
+  "notes": [
+    "R1 CR2 uses the archived working-independence covariance and singular-leverage handling; methodological sensitivity, not absolute guarantee.",
+    "R2 uses the fixed alpha grid. The post-hoc extended-alpha sensitivity is not rerun.",
+    "R2 bootstrap is conditional on fixed out-of-fold errors.",
+    "R3 uses fold-specific refitted curves and common held-out nodes; support mask and runtime are excluded from array payload."
+  ]
+}

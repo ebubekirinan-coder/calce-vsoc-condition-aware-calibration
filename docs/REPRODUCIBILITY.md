@@ -8,3 +8,7 @@
 6. Preserve stage ZIPs and calculate SHA256. ZIP container hashes may change after a rerun even when known scientific members remain bytewise identical. The provenance-safe v3 final packager verifies pinned scientific member fingerprints; metadata fields such as timestamp are checked as metadata. This proves equivalence of selected scientific members, **not all ZIP members**.
 7. Run lightweight repository tests via `python -m unittest discover -s tests -v`; they check included published artifacts and code provenance but cannot stand in for a clean Colab re-execution.
 8. For a publication release, provide code, documented input acquisition, and verified supplementary files. Preserve original raw CALCE source under its own attribution and license conditions.
+
+## R1–R3 supplementary reproducibility
+
+The separate research supplement dated 25 October 2026 is mapped in [`R123_REPRODUCIBILITY.md`](R123_REPRODUCIBILITY.md). R1/R2/R3 original source files are preserved unedited under `scripts/r123/`. Their outputs and original run manifests are under `supplementary/R123/`. The upstream stage archives and matching recorded source hashes are necessary for a fresh execution; the automated repository checks validate committed artifacts and do **not** rerun scientific fits.
